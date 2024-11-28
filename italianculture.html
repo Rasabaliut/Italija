@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Italy</title>
+  <link rel="stylesheet" href="italianculture.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+  <!-- Header Section -->
+<header>
+    
+    <div class="container">
+     
+        <!-- Burger Menu -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+            
+        </div>
+    
+        <!-- Navigation -->
+
+        <nav id="nav animate__animated animate__bounce">
+            <ul>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#people">People</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <main>
+    <section id="intro">
+      <div class="intro-text">
+        <h1 class="animate__animated animate__fadeInDown">Discover Italy</h1>
+        <p class="animate__animated animate__fadeInUp">Explore the rich culture, delicious cuisine, and warm hospitality of the Italian people.</p>
+       <!-- <img src="https://www.ontheluce.com/wp-content/uploads/2022/06/Amalfi-Coast-1440x900.jpg" alt="Discover Italy"> -->
+        <button class="explore-btn animate__animated animate__fadeIn">Explore Now</button>
+      </div>
+    </section>
+
+    <section id="culture">
+      <h2 class="section-title">Italian Culture</h2>
+      <div class="content">
+        <img src="https://anticosoleitaly.com/wp-content/uploads/2020/11/masks-1879572_1920.jpg" alt="Italian Art">
+        <p>
+            Italy's culture is deeply rooted in the arts, music, and fashion. From the Roman Empire to the Renaissance, Italy has 
+            contributed significantly to world history. Visit museums filled with masterpieces by Michelangelo, Da Vinci, and other greats.
+          </p>
+        </div>
+      </section>
+  
+      <section id="food">
+        <h2 class="section-title">Italian Food</h2>
+        <div class="content">
+          <img src="https://rp-cms.imgix.net/wp-content/uploads/AdobeStock_513646998-scaled.jpeg" alt="Italian Food">
+          <p>
+            Italian cuisine is known worldwide for its simplicity and freshness. Pizza, pasta, and gelato are just the beginning—Italy is also 
+            home to fine wines and gourmet traditions that vary by region.
+          </p>
+        </div>
+      </section>
+  
+      <section id="people">
+        <h2 class="section-title">Italian People</h2>
+        <div class="content">
+          <img src="https://media.istockphoto.com/id/1410086291/photo/friends-toasting-together-at-dinner.jpg?s=612x612&w=0&k=20&c=c0BTDTP-RhuTeE9Y44l7lboq1Wt8wwrDpoFKXUgbZ-8=" alt="Italian People">
+          <p>
+            Italians are known for their warmth, hospitality, and passion for life. Family plays a central role, and gatherings 
+            around food are cherished moments. Whether in bustling cities or quiet villages, you’ll always find a friendly face.
+          </p>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2024 Discover Italy. All rights reserved.</p>
+      <p>Contact us at <a href="mailto:info@discoveritaly.com">info@discoveritaly.com</a></p>
+    </footer>
+    // Burger Menu Functionality
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// Smooth Scroll for Navigation Links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').slice(1);
+    const targetElement = document.getElementById(targetId);
+
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+  
+    <script src="script.js"></script>
+  </body>
+  </html>
